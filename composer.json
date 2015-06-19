@@ -1,7 +1,7 @@
 {
     "name": "nordsoftware/lumen-rbac",
     "description": "RBAC module for the Lumen framework.",
-    "keywords": ["laravel", "lumen", "rbac", "permissions"],
+    "keywords": ["laravel", "lumen", "rbac", "permissions", "overseer"],
     "license": "MIT",
     "authors": [
         {
@@ -12,6 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
+        "crisu83/overseer": "dev-master"
     },
     "require-dev": {
         "laravel/lumen-framework": "^5.1@dev"
