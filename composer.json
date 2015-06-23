@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
-        "crisu83/overseer": "dev-master"
+        "crisu83/overseer": "0.1.0"
     },
     "require-dev": {
         "laravel/lumen-framework": "^5.1@dev"
