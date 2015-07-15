@@ -1,6 +1,9 @@
 <?php namespace Nord\Lumen\Rbac;
 
+use Crisu83\Overseer\Entity\Assignment;
+use Crisu83\Overseer\Entity\Permission;
 use Crisu83\Overseer\Entity\Resource;
+use Crisu83\Overseer\Entity\Role;
 use Crisu83\Overseer\Overseer;
 use Nord\Lumen\Rbac\Contracts\RbacService as RbacServiceContract;
 use Nord\Lumen\Rbac\Contracts\SubjectProvider;
@@ -58,5 +61,29 @@ class RbacService implements RbacServiceContract
         $subject = $this->subjectProvider->getSubject();
 
         return $this->overseer->hasPermission($permissionName, $subject, $resource, $params);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function saveRole(Role $role)
+    {
+        $this->overseer->saveRole($role);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function savePermission(Permission $permission)
+    {
+        $this->overseer->savePermission($permission);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function saveAssignment(Assignment $assignment)
+    {
+        $this->overseer->saveAssignment($assignment);
     }
 }
