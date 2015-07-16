@@ -7,15 +7,19 @@
         {
             "name": "Christoffer Niska",
             "email": "christofferniska@gmail.com"
+        },
+        {
+            "name": "Danijel Maricic",
+            "email": "danijelmaricic@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4",
-        "crisu83/overseer": "0.1"
+        "php": ">=5.5.9",
+        "crisu83/overseer": "~0.2@dev"
     },
     "require-dev": {
-        "laravel/lumen-framework": "^5.1@dev"
+        "laravel/lumen-framework": "^5.2@dev"
     },
     "autoload": {
         "psr-4": {
