@@ -34,6 +34,7 @@ class RbacService implements RbacServiceContract
         $this->subjectProvider = $subjectProvider;
     }
 
+
     /**
      * @inheritdoc
      */
@@ -41,6 +42,7 @@ class RbacService implements RbacServiceContract
     {
         $this->overseer->configure($config);
     }
+
 
     /**
      * @inheritdoc
@@ -56,12 +58,22 @@ class RbacService implements RbacServiceContract
     /**
      * @inheritdoc
      */
+    public function setSubjectProvider($provider)
+    {
+        $this->subjectProvider = $provider;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
     public function hasPermissions($permissionName, Resource $resource = null, array $params = [])
     {
         $subject = $this->subjectProvider->getSubject();
 
         return $this->overseer->hasPermission($permissionName, $subject, $resource, $params);
     }
+
 
     /**
      * @inheritdoc
@@ -71,6 +83,7 @@ class RbacService implements RbacServiceContract
         $this->overseer->saveRole($role);
     }
 
+
     /**
      * @inheritdoc
      */
@@ -78,6 +91,7 @@ class RbacService implements RbacServiceContract
     {
         $this->overseer->savePermission($permission);
     }
+
 
     /**
      * @inheritdoc

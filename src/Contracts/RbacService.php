@@ -24,6 +24,7 @@ interface RbacService
      */
     public function getPermissions(Resource $resource = null, array $params = []);
 
+
     /**
      * @param string        $permissionName
      * @param Resource|null $resource
@@ -33,19 +34,27 @@ interface RbacService
      */
     public function hasPermissions($permissionName, Resource $resource = null, array $params = []);
 
+
     /**
      * @param Role $role
      */
     public function saveRole(Role $role);
+
 
     /**
      * @param Permission $permission
      */
     public function savePermission(Permission $permission);
 
+
     /**
      * @param Assignment $assignment
      */
     public function saveAssignment(Assignment $assignment);
 
+
+    /**
+     * @param SubjectProvider $provider
+     */
+    public function setSubjectProvider($provider);
 }
