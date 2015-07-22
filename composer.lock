@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ee1ca6bab48e4da9abcf0d820df9c4db",
+    "hash": "23d7898edad5f63f946b00dddfbe9c4c",
     "packages": [
         {
             "name": "crisu83/overseer",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/crisu83/overseer.git",
-                "reference": "98b14b5408674a0c49b0552ca664ad60695b1157"
+                "reference": "019fa522bc44f64d307a9657114e1ca84327dc37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crisu83/overseer/zipball/98b14b5408674a0c49b0552ca664ad60695b1157",
-                "reference": "98b14b5408674a0c49b0552ca664ad60695b1157",
+                "url": "https://api.github.com/repos/crisu83/overseer/zipball/019fa522bc44f64d307a9657114e1ca84327dc37",
+                "reference": "019fa522bc44f64d307a9657114e1ca84327dc37",
                 "shasum": ""
             },
             "require-dev": {
@@ -42,7 +42,7 @@
                 }
             ],
             "description": "Framework agnostic RBAC implementation",
-            "time": "2015-06-22 19:55:28"
+            "time": "2015-07-16 13:44:27"
         }
     ],
     "packages-dev": [
@@ -2261,12 +2261,13 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "crisu83/overseer": 20,
         "laravel/lumen-framework": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4"
+        "php": ">=5.5.9"
     },
     "platform-dev": []
 }

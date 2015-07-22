@@ -6,7 +6,7 @@ RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [O
 
 ## Requirements
 
-- PHP 5.4 or newer
+- PHP 5.5.9 or newer
 - [Composer](http://getcomposer.org)
 
 ## Usage
