@@ -4,6 +4,7 @@ use Crisu83\Overseer\Entity\Assignment;
 use Crisu83\Overseer\Entity\Permission;
 use Crisu83\Overseer\Entity\Resource;
 use Crisu83\Overseer\Entity\Role;
+use Crisu83\Overseer\Entity\Subject;
 use Crisu83\Overseer\Overseer;
 use Nord\Lumen\Rbac\Contracts\RbacService as RbacServiceContract;
 use Nord\Lumen\Rbac\Contracts\SubjectProvider;
@@ -58,15 +59,6 @@ class RbacService implements RbacServiceContract
     /**
      * @inheritdoc
      */
-    public function setSubjectProvider($provider)
-    {
-        $this->subjectProvider = $provider;
-    }
-
-
-    /**
-     * @inheritdoc
-     */
     public function hasPermissions($permissionName, Resource $resource = null, array $params = [])
     {
         $subject = $this->subjectProvider->getSubject();
@@ -96,8 +88,49 @@ class RbacService implements RbacServiceContract
     /**
      * @inheritdoc
      */
-    public function saveAssignment(Assignment $assignment)
+    public function createAssignment(Subject $subject, array $roles = [])
     {
+        $assignment = new Assignment($subject->getSubjectId(), $subject->getSubjectName(), $roles);
+
         $this->overseer->saveAssignment($assignment);
+
+        return $assignment;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function updateAssignment(Subject $subject, array $roles)
+    {
+        $assignment = $this->overseer->getAssignment($subject->getSubjectId(), $subject->getSubjectName());
+
+        if ($assignment !== null) {
+            $assignment->changeRoles($roles);
+        } else {
+            $assignment = $this->createAssignment($subject, $roles);
+        }
+
+        return $assignment;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function deleteAssignment(Subject $subject)
+    {
+        $assignment = $this->overseer->getAssignment($subject->getSubjectId(), $subject->getSubjectName());
+
+        $this->overseer->deleteAssignment($assignment);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function setSubjectProvider($provider)
+    {
+        $this->subjectProvider = $provider;
     }
 }

@@ -4,6 +4,7 @@ use Crisu83\Overseer\Entity\Assignment;
 use Crisu83\Overseer\Entity\Permission;
 use Crisu83\Overseer\Entity\Resource;
 use Crisu83\Overseer\Entity\Role;
+use Crisu83\Overseer\Entity\Subject;
 
 interface RbacService
 {
@@ -48,9 +49,27 @@ interface RbacService
 
 
     /**
-     * @param Assignment $assignment
+     * @param Subject $subject
+     * @param array   $roles
+     *
+     * @return Assignment
      */
-    public function saveAssignment(Assignment $assignment);
+    public function createAssignment(Subject $subject, array $roles = []);
+
+
+    /**
+     * @param Subject $subject
+     * @param array   $roles
+     *
+     * @return Assignment
+     */
+    public function updateAssignment(Subject $subject, array $roles);
+
+
+    /**
+     * @param Subject $subject
+     */
+    public function deleteAssignment(Subject $subject);
 
 
     /**
