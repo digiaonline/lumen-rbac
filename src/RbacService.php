@@ -105,7 +105,7 @@ class RbacService implements RbacServiceContract
     {
         $assignment = $this->overseer->getAssignment($subject->getSubjectId(), $subject->getSubjectName());
 
-        if ($assignment !== null) {
+        if ($assignment instanceof Assignment) {
             $assignment->changeRoles($roles);
         } else {
             $assignment = $this->createAssignment($subject, $roles);
@@ -122,7 +122,9 @@ class RbacService implements RbacServiceContract
     {
         $assignment = $this->overseer->getAssignment($subject->getSubjectId(), $subject->getSubjectName());
 
-        $this->overseer->deleteAssignment($assignment);
+        if ($assignment instanceof Assignment) {
+            $this->overseer->deleteAssignment($assignment);
+        }
     }
 
 
