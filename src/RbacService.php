@@ -88,6 +88,15 @@ class RbacService implements RbacServiceContract
     /**
      * @inheritdoc
      */
+    public function getRolesForSubject(Subject $subject)
+    {
+        return $this->overseer->getRolesForSubject($subject);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
     public function createAssignment(Subject $subject, array $roles = [])
     {
         $assignment = new Assignment($subject->getSubjectId(), $subject->getSubjectName(), $roles);
@@ -112,6 +121,15 @@ class RbacService implements RbacServiceContract
         }
 
         return $assignment;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function getAssignment(Subject $subject)
+    {
+        return $this->overseer->getAssignmentForSubject($subject);
     }
 
 
