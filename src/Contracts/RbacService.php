@@ -50,6 +50,14 @@ interface RbacService
 
     /**
      * @param Subject $subject
+     *
+     * @return Role[]
+     */
+    public function getRolesForSubject(Subject $subject);
+
+
+    /**
+     * @param Subject $subject
      * @param array   $roles
      *
      * @return Assignment
@@ -64,6 +72,14 @@ interface RbacService
      * @return Assignment
      */
     public function updateAssignment(Subject $subject, array $roles);
+
+
+    /**
+     * @param Subject $subject
+     *
+     * @return Assignment
+     */
+    public function getAssignment(Subject $subject);
 
 
     /**
