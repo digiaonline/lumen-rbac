@@ -37,6 +37,22 @@ interface RbacService
 
 
     /**
+     * @param string        $permissionName
+     * @param Subject       $subject
+     * @param Resource|null $resource
+     * @param array         $params
+     *
+     * @return mixed
+     */
+    public function subjectHasPermissions(
+        $permissionName,
+        Subject $subject,
+        Resource $resource = null,
+        array $params = []
+    );
+
+
+    /**
      * @param Role $role
      */
     public function saveRole(Role $role);

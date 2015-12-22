@@ -70,6 +70,19 @@ class RbacService implements RbacServiceContract
     /**
      * @inheritdoc
      */
+    public function subjectHasPermissions(
+        $permissionName,
+        Subject $subject,
+        Resource $resource = null,
+        array $params = []
+    ) {
+        return $this->overseer->hasPermission($permissionName, $subject, $resource, $params);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
     public function saveRole(Role $role)
     {
         $this->overseer->saveRole($role);
