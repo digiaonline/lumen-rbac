@@ -1,6 +1,9 @@
 # Lumen RBAC
 
 [![Code Climate](https://codeclimate.com/github/nordsoftware/lumen-rbac/badges/gpa.svg)](https://codeclimate.com/github/nordsoftware/lumen-rbac)
+[![Latest Stable Version](https://poser.pugx.org/nordsoftware/lumen-rbac/version)](https://packagist.org/packages/nordsoftware/lumen-rbac)
+[![Total Downloads](https://poser.pugx.org/nordsoftware/lumen-rbac/downloads)](https://packagist.org/packages/nordsoftware/lumen-rbac)
+[![License](https://poser.pugx.org/nordsoftware/lumen-rbac/license)](https://packagist.org/packages/nordsoftware/lumen-rbac)
 
 RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [Overseer](http://github.com/crisu83/overseer/).
 
