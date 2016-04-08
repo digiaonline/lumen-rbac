@@ -1,4 +1,4 @@
-# lumen-rbac
+# Lumen RBAC
 
 RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [Overseer](http://github.com/crisu83/overseer/).
 
@@ -50,10 +50,7 @@ You can now use the ```Rbac``` facade or inject the ```RbacService``` where need
 
 ## Contributing
 
-Please note the following guidelines before submitting pull requests:
-
-- Use the [PSR-2 coding style](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-- Create pull requests towards the *develop* branch
+Please read the [guidelines](.github/CONTRIBUTING.md).
 
 ## License
 
