@@ -1,4 +1,9 @@
-# lumen-rbac
+# Lumen RBAC
+
+[![Code Climate](https://codeclimate.com/github/nordsoftware/lumen-rbac/badges/gpa.svg)](https://codeclimate.com/github/nordsoftware/lumen-rbac)
+[![Latest Stable Version](https://poser.pugx.org/nordsoftware/lumen-rbac/version)](https://packagist.org/packages/nordsoftware/lumen-rbac)
+[![Total Downloads](https://poser.pugx.org/nordsoftware/lumen-rbac/downloads)](https://packagist.org/packages/nordsoftware/lumen-rbac)
+[![License](https://poser.pugx.org/nordsoftware/lumen-rbac/license)](https://packagist.org/packages/nordsoftware/lumen-rbac)
 
 RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [Overseer](http://github.com/crisu83/overseer/).
 
@@ -39,7 +44,7 @@ Add the following lines to ```bootstrap/app.php```:
 $app->configure('rbac');
 ```
 
-**Please note that we only support Doctrine for now, but we plan to add support for storing permissions also in memory and using Eloquent.** 
+**Please note that we only support Doctrine for now, but we plan to add support for storing permissions also in memory and using Eloquent.**
 
 ```php
 $app->register('Nord\Lumen\Rbac\Doctrine\DoctrineStorageServiceProvider');
@@ -50,10 +55,7 @@ You can now use the ```Rbac``` facade or inject the ```RbacService``` where need
 
 ## Contributing
 
-Please note the following guidelines before submitting pull requests:
-
-- Use the [PSR-2 coding style](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-- Create pull requests towards the *develop* branch
+Please read the [guidelines](.github/CONTRIBUTING.md).
 
 ## License
 
