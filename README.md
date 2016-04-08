@@ -1,5 +1,7 @@
 # Lumen RBAC
 
+[![Code Climate](https://codeclimate.com/github/nordsoftware/lumen-rbac/badges/gpa.svg)](https://codeclimate.com/github/nordsoftware/lumen-rbac)
+
 RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [Overseer](http://github.com/crisu83/overseer/).
 
 **Please note that this module is still under active development.**
@@ -39,7 +41,7 @@ Add the following lines to ```bootstrap/app.php```:
 $app->configure('rbac');
 ```
 
-**Please note that we only support Doctrine for now, but we plan to add support for storing permissions also in memory and using Eloquent.** 
+**Please note that we only support Doctrine for now, but we plan to add support for storing permissions also in memory and using Eloquent.**
 
 ```php
 $app->register('Nord\Lumen\Rbac\Doctrine\DoctrineStorageServiceProvider');
