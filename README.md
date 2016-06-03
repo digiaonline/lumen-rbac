@@ -1,6 +1,7 @@
 # Lumen RBAC
 
 [![Code Climate](https://codeclimate.com/github/nordsoftware/lumen-rbac/badges/gpa.svg)](https://codeclimate.com/github/nordsoftware/lumen-rbac)
+[![StyleCI](https://styleci.io/repos/37718430/shield?style=flat)](https://styleci.io/repos/37718430)
 [![Latest Stable Version](https://poser.pugx.org/nordsoftware/lumen-rbac/version)](https://packagist.org/packages/nordsoftware/lumen-rbac)
 [![Total Downloads](https://poser.pugx.org/nordsoftware/lumen-rbac/downloads)](https://packagist.org/packages/nordsoftware/lumen-rbac)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
