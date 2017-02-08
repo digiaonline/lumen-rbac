@@ -9,11 +9,18 @@ use Nord\Lumen\Rbac\Facades\RbacService as RbacServiceFacade;
 class RbacServiceProvider extends ServiceProvider
 {
 
+    const CONFIG_KEY = 'rbac';
+
     /**
      * @inheritdoc
      */
     public function register()
     {
+        // If RBAC haven't been configured yet, configure.
+        if (!isset($this->app['config'][self::CONFIG_KEY])) {
+            $this->app->configure(self::CONFIG_KEY);
+        }
+
         $this->registerContainerBindings($this->app, $this->app['config']);
         $this->registerFacades();
         $this->registerConsoleCommands();
@@ -44,16 +51,18 @@ class RbacServiceProvider extends ServiceProvider
 
 
     /**
-     *
+     * Register the Facade.
      */
     protected function registerFacades()
     {
-        class_alias(RbacServiceFacade::class, 'Rbac');
+        if (!class_exists('Rbac')) {
+            class_alias(RbacServiceFacade::class, 'Rbac');
+        }
     }
 
 
     /**
-     *
+     * Register console commands.
      */
     protected function registerConsoleCommands()
     {

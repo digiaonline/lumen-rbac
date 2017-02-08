@@ -1,23 +1,24 @@
 <?php namespace Nord\Lumen\Rbac\Console;
 
 use Exception;
-use Symfony\Component\Console\Input\InputOption;
+use Illuminate\Console\Command;
+use Nord\Lumen\Rbac\RbacService;
 
-class ConfigureCommand extends RbacCommand
+class ConfigureCommand extends Command
 {
 
     /**
-     * @var string
+     * @inheritdoc
      */
-    protected $name = 'rbac:configure';
+    protected $signature = 'rbac:configure {--config= : Configuration file path.}';
 
     /**
-     * @var string
+     * @inheritdoc
      */
     protected $description = 'Configures the RBAC service from a file.';
 
     /**
-     * @inheritdoc
+     * Run the command.
      */
     public function fire()
     {
@@ -35,16 +36,16 @@ class ConfigureCommand extends RbacCommand
 
         $config = require($configPath);
 
+        $this->info(sprintf('Configuring with file "%s".', $configPath));
         $this->getRbacService()->configure($config);
+        $this->info('Configuration done.');
     }
 
     /**
-     * @return array
+     * @return RbacService
      */
-    protected function getOptions()
+    private function getRbacService()
     {
-        return [
-            ['config', null, InputOption::VALUE_REQUIRED, 'Configuration file path', null],
-        ];
+        return app(RbacService::class);
     }
 }
