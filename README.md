@@ -14,7 +14,7 @@ RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [O
 
 ## Requirements
 
-- PHP 5.5.9 or newer
+- PHP 5.6 or newer
 - [Composer](http://getcomposer.org)
 
 ## Usage
@@ -41,11 +41,7 @@ Run ```php artisan``` and you should see the new commands in the doctrine:* name
 
 ### Bootstrapping
 
-Add the following lines to ```bootstrap/app.php```:
-
-```php
-$app->configure('rbac');
-```
+**NOTE: The configuration of the module has been moved to the service provider.**
 
 **Please note that we only support Doctrine for now, but we plan to add support for storing permissions also in memory and using Eloquent.**
 
@@ -62,4 +58,4 @@ Please read the [guidelines](.github/CONTRIBUTING.md).
 
 ## License
 
-See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
