@@ -20,7 +20,7 @@ class ConfigureCommand extends Command
     /**
      * Run the command.
      */
-    public function fire()
+    public function handle()
     {
         $config = $this->option('config');
 

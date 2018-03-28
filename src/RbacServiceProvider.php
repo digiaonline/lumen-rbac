@@ -8,7 +8,6 @@ use Nord\Lumen\Rbac\Facades\RbacService as RbacServiceFacade;
 
 class RbacServiceProvider extends ServiceProvider
 {
-
     const CONFIG_KEY = 'rbac';
 
     /**
