@@ -1,10 +1,15 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-NOTE: Always keep an Unreleased version at the bottom of this CHANGELOG for easy updating.
+## [1.0.2] - 2018-05-25
+- Fixed some phpdoc issues
+
+## [1.0.1] - 2018-03-28
+- Added Lumen 5.5 compatibility
 
 ## [1.0.0] - 2017-02-08
 ### Added
