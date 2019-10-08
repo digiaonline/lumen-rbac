@@ -8,22 +8,23 @@
     "packages": [
         {
             "name": "crisu83/overseer",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/crisu83/overseer.git",
-                "reference": "9c7761790e188f7cc6e8f8c0522e781354010b23"
+                "reference": "0d31b444c0954344b85e3721da67d3787694819a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crisu83/overseer/zipball/9c7761790e188f7cc6e8f8c0522e781354010b23",
-                "reference": "9c7761790e188f7cc6e8f8c0522e781354010b23",
+                "url": "https://api.github.com/repos/crisu83/overseer/zipball/0d31b444c0954344b85e3721da67d3787694819a",
+                "reference": "0d31b444c0954344b85e3721da67d3787694819a",
                 "shasum": ""
             },
             "require-dev": {
-                "codeception/codeception": "^2.1@dev",
-                "codeception/specify": "dev-master",
-                "codeception/verify": "dev-master"
+                "codeception/codeception": "^2.1",
+                "codeception/specify": "^0.4",
+                "codeception/verify": "^0.3",
+                "satooshi/php-coveralls": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -42,7 +43,7 @@
                 }
             ],
             "description": "Framework agnostic RBAC implementation",
-            "time": "2016-07-15T09:15:19+00:00"
+            "time": "2018-05-24T23:37:24+00:00"
         }
     ],
     "packages-dev": [

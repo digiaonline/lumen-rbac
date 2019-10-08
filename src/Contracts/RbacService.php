@@ -93,7 +93,7 @@ interface RbacService
     /**
      * @param Subject $subject
      *
-     * @return Assignment
+     * @return Assignment|null
      */
     public function getAssignment(Subject $subject);
 
