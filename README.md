@@ -22,7 +22,7 @@ RBAC module for the [Lumen PHP framework](http://lumen.laravel.com/) based on [O
 composer require nordsoftware/lumen-rbac
 ```
 
-2. Copy the configuration template in `config/rbac.php` to your application's `config` directory and modifying according 
+2. Copy the configuration template in `config/rbac.php` to your application's `config` directory and modify according 
 to your needs.
 
 3. Add the following lines to your `bootstrap/app.php`:
